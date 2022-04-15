@@ -1,1 +1,13 @@
 
+<div class ="" [ngStyle]="{'background-color':'linear-gradient(to bottom, #000428, #004683' }">
+    <div *ngFor="let gif of gifs" class="m-4" >
+            <div class="card float-start">
+                <div class="card-image"> 
+                    <img [src]="gif.images.downsized.url" alt=""> </div>
+                <div class="card-content d-flex flex-column align-items-center">
+                    <h4 class="pt-2">{{gif.title}}</h4>
+                    <h5>{{gif.username}})</h5>
+                </div>
+            </div>
+    </div>
+</div>

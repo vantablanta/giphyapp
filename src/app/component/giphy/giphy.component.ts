@@ -10,13 +10,15 @@ import { TrendingService } from 'src/app/service/trending.service';
 
 export class GiphyComponent implements OnInit {
 
+gifs: any[] = []
 
   constructor(public trendingService: TrendingService) { }
 
   ngOnInit(): void {
     this.trendingService.getGiphys().subscribe(
-      response=> {
-        console.log(response)
+      (response: any)=> {
+        this.gifs = response.data
+        console.log(this.gifs)
       }
     )
   }
